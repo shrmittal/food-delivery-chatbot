@@ -1,0 +1,103 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- emailConfirm
+- restaurant_search
+- greet
+- affirm
+- emailRecipient
+- goodbye
+- incorrect_request
+- stop
+entities:
+- cuisine
+- emailConfirmation
+- location
+- people
+- price
+- to
+slots:
+  cuisine:
+    type: text
+    influence_conversation: true
+  location:
+    type: text
+    influence_conversation: true
+  price:
+    type: text
+    influence_conversation: true
+  to:
+    type: text
+    influence_conversation: true
+  emailConfirmation:
+    type: text
+    influence_conversation: true
+responses:
+  utter_ask_cuisine:
+  - buttons:
+    - payload: Chinese
+      title: Chinese
+    - payload: Mexican
+      title: Mexican
+    - payload: Italian
+      title: Italian
+    - payload: American
+      title: American
+    - payload: South Indian
+      title: South Indian
+    - payload: North Indian
+      title: North Indian
+    text: what kind of cuisine would you like?
+  utter_ask_price:
+  - buttons:
+    - payload: Under300
+      title: Lesser than Rs. 300
+    - payload: Between300to700
+      title: Rs. 300 to Rs. 700
+    - payload: Over700
+      title: More than Rs. 700
+    text: What is the average budget for two people?
+  utter_ask_howcanhelp:
+  - text: how can I help you?
+  utter_ask_location:
+  - text: In what location?
+  utter_default:
+  - text: i cannot understand
+  utter_goodbye:
+  - text: goodbye :(
+  - text: Bye-bye
+  utter_greet:
+  - text: hey there! How may i help you
+  - text: Hi, How can I help you!
+  - text: Hey, How is it going. How May I help you Today
+  utter_error_response:
+  - text: I do not understand. Please mention city, cuisine and price range for restaurant you are interested in.
+  - text: Can you rephrase that? Please let me know details of restaurant you are looking for.
+  utter_email:
+  - buttons:
+    - payload: Yes
+      title: Yes
+    - payload: No
+      title: No
+    text: Do you want the results for top 10 restaurants sent in an email?
+  utter_email_sent:
+  - text: Email sent. Good day.
+  - text: Email sent. Bon apetit!
+  utter_emailid:
+  - text: Can you please share your email ID?
+actions:
+- action_search_restaurants
+- action_send_mail
+- utter_ask_cuisine
+- utter_ask_howcanhelp
+- utter_ask_location
+- utter_ask_price
+- utter_default
+- utter_email
+- utter_email_sent
+- utter_emailid
+- utter_error_response
+- utter_goodbye
+- utter_greet

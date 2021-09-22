@@ -1,0 +1,194 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hi
+    - ey
+    - hola
+    - allo
+    - ola
+    - hello
+- intent: restaurant_search
+  examples: |
+    - [italian](cuisine) restaurant
+    - looking for [italian](cuisine) restaurant
+    - [chikmagalur](location)
+    - [South Indian](cuisine)
+    - looking for [italian](cuisine) restaurant in [noida](location)
+    - looking for [italian](cuisine) restaurant in [delhi](location)
+    - where can i find [punjabi](cuisine) food
+    - [samarganj](location)
+    - looking for a [decently]{"entity": "price", "value": "under300"} priced restaurant in [bangalore](location)
+    - [south indian](cuisine)
+    - [North indian](cuisine)
+    - [blr]{"entity": "location", "value": "bangalore"}
+    - [bangalore](location)
+    - looking for [south indian](cuisine) restaurant in [delhi](location)
+    - looking for a [decently priced]{"entity": "price", "value": "under300"} [south indian](cuisine) restaurant in [delhi](location)
+    - looking for a [mid]{"entity": "price", "value": "Between300to700"} range [north indian](cuisine) restaurant in [agra](location)
+    - looking for a restaurant in [baroda]{"entity": "location", "value": "Vadodara"}
+    - [North Indian](cuisine)
+    - More than Rs. [700](price)
+    - looking for a [low]{"entity": "price", "value": "under300"} price [north indian](cuisine) restaurant in [baroda]{"entity": "location", "value": "Vadodara"}
+    - looking for [high]{"entity": "price", "value": "Over700"} price [Chinese]{"entity": "cuisine", "value": "chinese"} restaurant in [pune](location)
+    - looking for a [cheap]{"entity": "price", "value": "under300"} [Chinese]{"entity": "cuisine", "value": "chinese"} restaurant in [pune](location)
+    - looking for [pocket friendly]{"entity": "price", "value": "under300"} price [Chinese]{"entity": "cuisine", "value": "chinese"} restaurant in [pune](location)
+    - looking for [Chinese]{"entity": "cuisine", "value": "chinese"} restaurant in [pune](location) priced around Rs. [400]{"entity": "price", "value": "Between300to700"}
+    - looking for a [north indian](cuisine) restaurant in [bhopal](location) priced around rs. [500]{"entity": "price", "value": "Between300to700"}
+    - looking for an [inexpensive]{"entity": "price", "value": "under300"} [north indian](cuisine) restaurant in [agra](location)
+    - looking for a [not so expensive]{"entity": "price", "value": "under300"} [north indian](cuisine) restaurant in [faridabad](location)
+    - looking for a [budget]{"entity": "price", "value": "under300"} [north indian](cuisine) restaurant in [gurugram]{"entity": "location", "value": "Gurgaon"}
+    - looking for a [cheap]{"entity": "price", "value": "under300"} restaurant in [faridabad](location)
+    - [street food](cuisine)
+    - looking for a [fancy]{"entity": "price", "value": "Over700"} [american](cuisine) restaurant in [bombay]{"entity": "location", "value": "Mumbai"}
+    - looking for a [fancy]{"entity": "price", "value": "Over700"} [american](cuisine) restaurant in [bangalore](location)
+    - are there any [mid]{"entity": "price", "value": "Between300to700"} range restaurants in [allahabad](location)
+    - [Mexican](cuisine)
+    - looking for a [moderately]{"entity": "price", "value": "Between300to700"} priced restaurant in [bombay]{"entity": "location", "value": "Mumbai"}
+    - [Chinese]{"entity": "cuisine", "value": "chinese"}
+    - looking for a [fancy]{"entity": "price", "value": "Over700"} [north indian](cuisine) restaurant in [bombay]{"entity": "location", "value": "Mumbai"}
+    - are there any [mid]{"entity": "price", "value": "Between300to700"} range restaurants in [vizag](location)
+    - [cheap]{"entity": "price", "value": "under300"} [mithai](cuisine) [delhi](location)
+    - [cheap]{"entity": "price", "value": "under300"} mithai [delhi]{"entity": "location", "value": "New Delhi"}
+    - [Italian](cuisine)
+    - in [Jamshedpur](location)
+    - in [Andaman](location)
+    - in [Bikaner](location)
+    - in [Chichpokli](location)
+    - in [Hosur](location)
+    - find [exotic]{"entity": "price", "value": "Over700"} restaurant in [Shimla](location)
+    - how about in [chennai](location)
+    - looking for [exotic]{"entity": "price", "value": "Over700"} [italian](cuisine) restarant in [Madras]{"entity": "location", "value": "Chennai"}
+    - looking for an [exotic]{"entity": "price", "value": "Over700"} restaurant in [madras]{"entity": "location", "value": "Chennai"} serving [italian](cuisine)
+    - looking for an [exotic]{"entity": "price", "value": "Over700"} restaurant in [Madras]{"entity": "location", "value": "Chennai"} serving [italian](cuisine)
+    - looking for restau in [allahabad](location)
+    - [italian](cuisine)
+    - [Exotic]{"entity": "price", "value": "Over700"}
+    - looking for a restaurant in [cochin]{"entity": "location", "value": "Kochi"}
+    - [pocket-friendly]{"entity": "price", "value": "under300"}
+    - [chinese](cuisine) restaurant in [amritsar](location) [inexpensive]{"entity": "price", "value": "under300"}
+    - [rajasthani](cuisine) restaurant in [bhubhaneshwar]{"entity": "location", "value": "Bhubaneshwar"} [moderately expensive]{"entity": "price", "value": "Between300to700"}
+    - [moderately expensive]{"entity": "price", "value": "Between300to700"} [pizza](cuisine) joint in [agra](location)
+    - [cheap]{"entity": "price", "value": "under300"} [mithai](cuisine) stall in [dehradun](location)
+    - [moderately]{"entity": "price", "value": "Between300to700"} priced [pizza](cuisine) place in [mangaluru]{"entity": "location", "value": "Mangalore"}
+    - [continental](cuisine) place in [gangtok](location) [high]{"entity": "price", "value": "Over700"} price
+    - looking for a restaurant in [gangtok](location)
+    - [Over700](price)
+    - looking for a restaurant
+    - [ghaziabad](location)
+    - [tibetan](cuisine)
+    - [under300](price)
+    - looking for [cheap]{"entity": "price", "value": "under300"} [north indian](cuisine) restaurant in [faridabad](location)
+    - looking for a [simple]{"entity": "price", "value": "under300"} [north indian](cuisine) restaurant in [hubli](location)
+    - how about in [ghaziabad](location)
+    - looking for a [simple]{"entity": "price", "value": "under300"} [north indian](cuisine) restaurant in [noida](location)
+    - looking for a [cheap]{"entity": "price", "value": "under300"} [north indian](cuisine) restaurant in [ghaziabad](location)
+    - looking for a [cheap]{"entity": "price", "value": "under300"} [north indian](cuisine) restaurant in [faridabad](location)
+    - can you show me [top]{"entity": "price", "value": "Over700"} [north indian](cuisine) restaurants in [ranchi](location)?
+    - looking for an [exotic]{"entity": "price", "value": "Over700"} [italian](cuisine) restaurant in [pune](location)
+    - can you find me [top]{"entity": "price", "value": "Over700"} [mexican](cuisine) restaurants in [jeypore]{"entity": "location", "value": "Jaipur"} and send these to [shenoy.tejaswini@gmail.com](to)
+    - can you find me some [exotic]{"entity": "price", "value": "Over700"} [mexican](cuisine) restaurant in [jeypore]{"entity": "location", "value": "Jaipur"} and send them to [tejaswinishreyadsc23@yahoo.com](to)
+    - looking for a [moderately]{"entity": "price", "value": "Between300to700"} priced [north indian](cuisine) restaurant in [allahabad](location)
+    - [udhagamandalam]{"entity": "location", "value": "Ooty"}
+    - [benares]{"entity": "location", "value": "Varanasi"}
+    - looking for restaurant in [goa](location)
+    - [American](cuisine)
+    - [under300](price)
+    - looking for a restaurant in [goa](location)
+    - [Italian](cuisine)
+    - looking for a restaurant in [goa]{"entity": "location", "value": "Goa"}
+    - [Over700](price)
+- intent: affirm
+  examples: |
+    - thanks, goodbye
+    - done. perfect
+    - thanks
+    - ok
+    - cool
+    - ciao
+    - thanks a lot
+    - great
+    - thats awesome
+    - brilliant
+- intent: goodbye
+  examples: |
+    - end
+- intent: incorrect_request
+  examples: |
+    - looking for weather details
+- intent: emailRecipient
+  examples: |
+    - send it to [shenoy.tejaswini@gmail.com](to)
+    - [abcd259@gmail.com](to)
+    - [qwer_ty@yahoo.co.in](to)
+    - [tejaswinishreyadsc23@gmail.com](to)
+    - [tejaswinishreyadsc23@gmail.com](to)
+- synonym: under300
+  examples: |
+    - decently
+    - decently priced
+    - low
+    - cheap
+    - pocket friendly
+    - inexpensive
+    - not so expensive
+    - budget
+    - pocket-friendly
+    - simple
+    - under300
+- synonym: bangalore
+  examples: |
+    - blr
+- synonym: Between300to700
+  examples: |
+    - mid
+    - 400
+    - 500
+    - moderately
+    - moderately expensive
+    - Between300to700
+- synonym: Vadodara
+  examples: |
+    - baroda
+- synonym: Over700
+  examples: |
+    - high
+    - fancy
+    - exotic
+    - Exotic
+    - top
+    - Over700
+- synonym: chinese
+  examples: |
+    - Chinese
+- synonym: Gurgaon
+  examples: |
+    - gurugram
+- synonym: Mumbai
+  examples: |
+    - bombay
+- synonym: New Delhi
+  examples: |
+    - delhi
+- synonym: Chennai
+  examples: |
+    - Madras
+    - madras
+- synonym: Kochi
+  examples: |
+    - cochin
+- synonym: Bhubaneshwar
+  examples: |
+    - bhubhaneshwar
+- synonym: Mangalore
+  examples: |
+    - mangaluru
+- synonym: Jaipur
+  examples: |
+    - jeypore
+- synonym: Ooty
+  examples: |
+    - udhagamandalam
+- synonym: Varanasi
+  examples: |
+    - benares
